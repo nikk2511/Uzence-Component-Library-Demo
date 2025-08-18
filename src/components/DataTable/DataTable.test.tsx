@@ -172,8 +172,8 @@ describe('DataTable', () => {
     );
     
     // Check if custom render function is applied
-    expect(screen.getByText('active')).toHaveClass('status-active');
-    expect(screen.getByText('inactive')).toHaveClass('status-inactive');
+    expect(screen.getAllByText('active')[0]).toHaveClass('status-active');
+    expect(screen.getAllByText('inactive')[0]).toHaveClass('status-inactive');
   });
 
   it('applies striped styling', () => {

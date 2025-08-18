@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { InputField } from './InputField';
+import InputField from './InputField';
 
 describe('InputField', () => {
   it('renders with label and placeholder', () => {
@@ -28,13 +28,9 @@ describe('InputField', () => {
     const input = screen.getByLabelText('Test Input');
     fireEvent.change(input, { target: { value: 'test value' } });
     
-    expect(handleChange).toHaveBeenCalledWith(
-      expect.objectContaining({
-        target: expect.objectContaining({
-          value: 'test value'
-        })
-      })
-    );
+    expect(handleChange).toHaveBeenCalled();
+    const callArg = handleChange.mock.calls[0][0];
+    expect(callArg.target.value).toBe('test value');
   });
 
   it('shows error message when invalid', () => {

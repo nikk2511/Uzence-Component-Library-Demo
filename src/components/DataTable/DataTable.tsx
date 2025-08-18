@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { ChevronUp, ChevronDown, Loader2, Database } from 'lucide-react';
 import { cn } from '@/utils/cn';
 import { sortData, getNextSortDirection } from '@/utils/sorting';
-import { DataTableProps, Column, SortState, SortDirection } from '@/types';
+import { DataTableProps, Column, SortState } from '@/types';
 
 /**
  * A flexible data table component with sorting, selection, and customization options

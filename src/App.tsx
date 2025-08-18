@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { InputField, DataTable } from './components';
 import { Column } from './types';
 
