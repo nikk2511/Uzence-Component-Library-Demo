@@ -1,6 +1,4 @@
 {
   "name": "uzence-storybook",
-  "buildCommand": "npm run build-storybook",
-  "outputDirectory": "storybook-static",
-  "installCommand": "npm install"
+  "outputDirectory": "storybook-static"
 }
